@@ -1,0 +1,80 @@
+.hero {
+  background-image: url("../../public/foto/фон1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: calc(100vh - 80px);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 16px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.hero .btn-outline {
+  background: transparent;
+  border: 2px solid #ffc400;
+  color: #ffc400;
+}
+
+.hero .btn-outline:hover {
+  background: #ffc400;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 64px);
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
